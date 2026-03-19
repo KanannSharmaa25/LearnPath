@@ -3,7 +3,7 @@ import { AppContext } from '../App';
 import './AICoach.css';
 
 function AICoach() {
-  const { setStep, userProfile, chatHistory, setChatHistory, learningPath, quizBatchScores, enrolledCourses } = React.useContext(AppContext);
+  const { userProfile, chatHistory, setChatHistory, learningPath, quizBatchScores, enrolledCourses } = React.useContext(AppContext);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef(null);
@@ -108,7 +108,7 @@ function AICoach() {
     };
   };
 
-  const context = getContext();
+  getContext();
 
   const suggested = [
     { icon: '📅', text: 'How should I structure my daily study schedule?', category: 'planning' },

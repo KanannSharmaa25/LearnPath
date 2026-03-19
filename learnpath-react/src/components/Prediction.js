@@ -31,6 +31,7 @@ function Prediction() {
     if (activeMode === 'smart' && !prediction) {
       handleSmartPrediction();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeMode]);
 
   const goalEstimates = {

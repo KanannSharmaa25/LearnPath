@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 import Landing from './components/Landing';
 import Sidebar from './components/Sidebar';
 import Profile from './components/Profile';

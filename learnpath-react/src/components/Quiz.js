@@ -4,7 +4,7 @@ import { AppContext } from '../App';
 function Quiz() {
   const { setStep, quizBatchScores, setQuizBatchScores } = React.useContext(AppContext);
   const [selectedTopic, setSelectedTopic] = useState(null);
-  const [currentBatch, setCurrentBatch] = useState(0);
+  const [, setCurrentBatch] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [answers, setAnswers] = useState({});
   const [showWarning, setShowWarning] = useState(false);
@@ -355,8 +355,6 @@ function Quiz() {
   };
 
   const topics = Object.keys(QUIZZES);
-  const totalBatches = 1;
-  const batchSize = 10;
 
   const handleAnswer = (index, answer) => {
     setAnswers({ ...answers, [index]: answer });

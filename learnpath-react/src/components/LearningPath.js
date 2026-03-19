@@ -3,7 +3,7 @@ import { AppContext } from '../App';
 import './LearningPath.css';
 
 function LearningPath() {
-  const { setStep, userProfile, quizBatchScores, learningPath, setLearningPath, aiLearningPath, setAiLearningPath, userLearningPath, setUserLearningPath, selectedPathType, setSelectedPathType } = React.useContext(AppContext);
+  const { setStep, userProfile, quizBatchScores, learningPath, setLearningPath, aiLearningPath, setAiLearningPath, userLearningPath, setUserLearningPath, setSelectedPathType } = React.useContext(AppContext);
   const [activeTab, setActiveTab] = useState('analysis');
   const [userDescription, setUserDescription] = useState('');
   const [preferredTopics, setPreferredTopics] = useState([]);
@@ -15,9 +15,6 @@ function LearningPath() {
   const [timeline, setTimeline] = useState('3-6-months');
   const [certificationGoals, setCertificationGoals] = useState([]);
   const [projectIdeas, setProjectIdeas] = useState('');
-  const [difficultyPreference, setDifficultyPreference] = useState('progressive');
-  const [timeAvailability, setTimeAvailability] = useState('weekday-evenings');
-  const [resourcePreference, setResourcePreference] = useState('mix');
   const [priorityOrder, setPriorityOrder] = useState([]);
   const [specificSkills, setSpecificSkills] = useState('');
 
@@ -35,7 +32,6 @@ function LearningPath() {
   const generateAiPath = () => {
     const path = [];
     const goal = userProfile.goal || '';
-    const hours = userProfile.hours || 2;
     const experience = userProfile.experience || 0;
 
     if (experience < 1) {

@@ -29,8 +29,6 @@ function Profile() {
 
   const learningStyles = ['Visual', 'Auditory', 'Reading/Writing', 'Kinesthetic', 'Social', 'Solitary'];
   const skillOptions = ['Python', 'JavaScript', 'HTML/CSS', 'SQL', 'Java', 'None yet'];
-  const constraintOptions = ['Limited time', 'Budget limited', 'No tech background', 'Family responsibilities', 'None'];
-
   const handleSubmit = () => {
     setUserProfile(formData);
     setStep(2);
